@@ -109,7 +109,6 @@ public:
     // TODO: Save/Load functions
     // SaveMap(const string &filename);
     // LoadMap(const string &filename);
-
     KeyFrame* GetLastKeyFrame() const;
 
 private:

@@ -29,6 +29,7 @@
 #include"System.h"
 
 using namespace std;
+
 void LoadImages(const string &strSequence, vector<string> &vstrImageFilenames,
                 vector<double> &vTimestamps);
 

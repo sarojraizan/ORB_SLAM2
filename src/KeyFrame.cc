@@ -661,7 +661,6 @@ float KeyFrame::ComputeSceneMedianDepth(const int q)
 
     return vDepths[(vDepths.size()-1)/q];
 }
-
 void KeyFrame::ComputeMinMaxInverseDepth(float& minInverseDepth, float& maxInverseDepth)
 {
 	vector<MapPoint*> vpMapPoints;
@@ -742,4 +741,5 @@ void KeyFrame::ComputeDepthMap(std::vector<cv::Point3f>& pCloud)
 		}
 	}
 }
+
 } //namespace ORB_SLAM

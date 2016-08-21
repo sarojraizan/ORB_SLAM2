@@ -97,4 +97,3 @@ target_link_libraries(mono_kitti ${PROJECT_NAME})
 add_executable(orbWrapper
 Examples/Monocular/ORB_Wrapper.cc)
 target_link_libraries(orbWrapper ${PROJECT_NAME})
-

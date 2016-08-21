@@ -118,6 +118,7 @@ public:
 
     void ComputeMinMaxInverseDepth(float& minInverseDepth, float& maxInverseDepth);
     void ComputeDepthMap(std::vector<cv::Point3f>& pCloud);
+
     // The following variables are accesed from only 1 thread or never change (no mutex needed).
 public:
 

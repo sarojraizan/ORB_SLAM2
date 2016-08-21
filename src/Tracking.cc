@@ -284,6 +284,7 @@ void Tracking::Track()
             MonocularInitialization();
 
         mpFrameDrawer->Update(this);
+
         if(mState!=OK)
             return;
     }
@@ -1518,9 +1519,9 @@ void Tracking::Reset()
     //mpViewer->RequestStop();
 
     cout << "System Reseting" << endl;
-
     //while(!mpViewer->isStopped())
     //    usleep(3000);
+
     // Reset Local Mapping
     cout << "Reseting Local Mapper...";
     mpLocalMapper->RequestReset();
@@ -1553,9 +1554,11 @@ void Tracking::Reset()
     mlpReferences.clear();
     mlFrameTimes.clear();
     mlbLost.clear();
+
     //mpViewer->Release();
     cv::Size s; s.height = 4; s.width = 4;
     mCurrentFrame.mTcw = cv::Mat::ones(s,CV_32F);
+
 }
 
 void Tracking::ChangeCalibration(const string &strSettingPath)
@@ -1600,5 +1603,6 @@ KeyFrame* Tracking::GetCurrentKeyFrame() const
 {
 	return mpLastKeyFrame;
 }
+
 
 } //namespace ORB_SLAM
