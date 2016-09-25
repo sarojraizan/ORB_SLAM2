@@ -732,10 +732,10 @@ void KeyFrame::ComputeDepthMap(std::vector<cv::Point3f>& pCloud)
 			float y = Pc.at<float>(1);
 			float z = Pc.at<float>(2);
 
-			float u = fx*x/z + cx;
-			float v = fy*y/z + cy;
+			//float u = fx*x/z + cx;
+			//float v = fy*y/z + cy;
 		
-			pCloud.push_back(cv::Point3f(u,v,z));		
+			pCloud.push_back(cv::Point3f(x,y,z));		
 	
 
 		}
